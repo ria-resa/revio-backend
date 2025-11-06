@@ -6,8 +6,6 @@
  * @returns {string} - Cleaned, normalized Markdown
  */
 
-
-
 function isCaptionLine(line) {
   if (!line || line.length > 100) return false;
 
@@ -21,7 +19,6 @@ function isCaptionLine(line) {
 
   return patterns.some((pat) => pat.test(line.trim()));
 }
-
 
 export function postprocessMarkdown(markdown, sourceType) {
   //For Debugging in terminal, to show the processed text. It is limited to 500. Can be changed. For preview purposes.
@@ -46,7 +43,6 @@ if (sourceType === 'docx') {
     })
     .join('\n');
 }
-
 
 
   // S2: Normalize bullet symbols to Markdown dash
@@ -107,7 +103,6 @@ text = text.replace(/([^\n]+)\n(?=[^\n])/g, (match, prevLine) => {
 
   return match;
 });
-
 
 
   // S5: Ensure proper space after heading markers (e.g., ##Heading → ## Heading)
