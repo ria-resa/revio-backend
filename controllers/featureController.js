@@ -34,18 +34,12 @@ const updateCounterAndGetId = async (uid, folderId, prefix) => {
 };
 
 
-
-
-
-// Helper: remove ```json or ``` fences from GPT output
 function stripFenced(text) {
   if (!text) return '';
-  return text.replace(/```json\s*/gi, '')  // remove opening ```json
-             .replace(/```/g, '')         // remove closing ```
+  return text.replace(/```json\s*/gi, '')  
+             .replace(/```/g, '')        
              .trim();
 }
-
-
 
 // Feature Prompting
 async function processFeature(req, res, featureType) {
