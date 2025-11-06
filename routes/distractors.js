@@ -7,7 +7,7 @@ const router = express.Router();
 
 const limiter = rateLimit({
   windowMs: 60 * 1000, 
-  max: 15, // 15 requests per minute per IP
+  max: 15, 
   message: { error: "Too many requests, slow down." },
 });
 
