@@ -334,7 +334,6 @@ function traverse(obj, callback) {
 }
 
 
-
 // Flatten slide content to plain text (all text, including SmartArt, tables, charts, notes)
 export function flattenSlideText(slides) {
   const lines = [];
